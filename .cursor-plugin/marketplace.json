@@ -8,14 +8,14 @@
   },
   "plugins": [
     {
-      "name": "sublime-agent-development",
-      "source": "./plugins/sublime-agent-development",
-      "description": "Leva uma necessidade de negócio até um agente procedural pronto para produção na plataforma Sublime - descobre como o trabalho acontece de verdade, julga o processo antes de automatizá-lo, modela em conhecimento, procedimentos e tabelas de decisão, constrói pela borda MCP da Sublime, mede contra cenários declarados, calibra até o portão de qualidade aprovar, e entrega com evidência que um terceiro consegue inspecionar. Use quando alguém quiser um agente, assistente ou bot que converse com clientes - atendimento, vendas, agendamento, triagem, qualificação; quando descrever um processo de negócio que quer automatizar; ou quando pedir para alterar, testar, medir, calibrar, avaliar, precificar ou publicar um agente que já existe na Sublime. Also triggers in English - build an agent, automate this process, test my agent, publish my agent. Não use para escrever código de aplicação, para construir agentes fora da Sublime, nem para engenharia de prompt avulsa. Exige o servidor MCP da Sublime conectado.",
+      "name": "sublime",
+      "source": "./plugins/sublime",
+      "description": "Guide business needs to production-ready procedural agents on Sublime. Discover and validate the process, model it into knowledge, procedures, and decision tables, build through the MCP edge, measure against declared scenarios, calibrate until the quality gate approves, and deliver auditable evidence. Trigger it to create, automate, alter, test, measure, calibrate, evaluate, price, or publish agents, assistants, and conversational bots on Sublime — including \"build an agent,\" \"automate this process,\" \"test my agent,\" and \"publish my agent.\" Do not trigger it for application code, agents outside Sublime, or standalone prompt engineering. Requires the Sublime MCP server connected and accessible.",
       "author": {
         "name": "Sublime",
         "url": "https://sublime.am"
       },
-      "homepage": "https://sublime.am/skill",
+      "homepage": "https://sublime.am",
       "license": "LicenseRef-Sublime-Commercial",
       "keywords": [
         "agent",

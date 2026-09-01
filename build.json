@@ -1,16 +1,16 @@
 {
   "skill": {
-    "name": "sublime-agent-development",
-    "version": "1.1.0",
+    "name": "sublime",
+    "version": "2.0.0",
     "platform": ">=1.0 <2"
   },
   "mcp": {
-    "name": "am.sublime/agent-development",
+    "name": "am.sublime/sublime",
     "version": "1.0.0"
   },
-  "tree": "sha256:49bf4c069b825e96d0859be6266c3113",
+  "tree": "sha256:a041a22e8381ad2a86caed67aae5f870",
   "border": "sha256:5e9f10a339bb4e63afbbd932f38d7a77",
-  "commit": "a67167d68a319c1aeeb78bea0abdff6cb4c605bb",
-  "run": null,
-  "builtAt": "2026-09-01T02:26:17.518Z"
+  "commit": "585bc8248f63eff2c641f7718faed0f60e7ed466",
+  "run": "https://github.com/domemp/sublime/actions/runs/33541128775",
+  "builtAt": "2026-09-01T18:02:24.081Z"
 }
