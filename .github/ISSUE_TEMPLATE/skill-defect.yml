@@ -1,0 +1,44 @@
+name: A Skill instruiu algo errado
+description: O assistente seguiu a Skill e o resultado não foi o esperado
+labels: [defeito]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A Skill é instrução. O que conserta uma instrução é o relato do que ela fez alguém
+        fazer — quanto mais literal, melhor.
+  - type: input
+    id: version
+    attributes:
+      label: Versão da Skill
+      description: Está em `build.json`, na raiz deste repositório.
+      placeholder: 1.1.0
+    validations:
+      required: true
+  - type: dropdown
+    id: agent
+    attributes:
+      label: Onde aconteceu
+      options: ['Claude Code', 'Cursor', 'Outro']
+    validations:
+      required: true
+  - type: textarea
+    id: asked
+    attributes:
+      label: O que você pediu
+      description: A frase que você mandou ao assistente, literal.
+    validations:
+      required: true
+  - type: textarea
+    id: instructed
+    attributes:
+      label: O que a Skill mandou fazer
+      description: A fase, o passo ou a operação que ela nomeou.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: O que deveria ter acontecido
+    validations:
+      required: true

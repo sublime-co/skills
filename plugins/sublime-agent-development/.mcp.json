@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "sublime": {
+      "type": "http",
+      "url": "https://api.sublime.am/mcp"
+    }
+  }
+}
