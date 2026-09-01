@@ -4,6 +4,7 @@
     "name": "Sublime",
     "url": "https://sublime.am"
   },
+  "description": "Agent Skills for building, measuring and publishing procedural agents on Sublime.",
   "plugins": [
     {
       "name": "sublime",
@@ -14,7 +15,7 @@
         "url": "https://sublime.am"
       },
       "homepage": "https://sublime.am",
-      "license": "LicenseRef-Sublime-Commercial",
+      "license": "MIT",
       "keywords": [
         "agent",
         "sublime",

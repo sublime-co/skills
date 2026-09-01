@@ -1,16 +1,16 @@
 {
   "skill": {
     "name": "sublime",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "platform": ">=1.0 <2"
   },
   "mcp": {
     "name": "am.sublime/sublime",
     "version": "1.0.0"
   },
-  "tree": "sha256:a041a22e8381ad2a86caed67aae5f870",
+  "tree": "sha256:febd10fa5ac6cab3a4d7c9d6101a5aa4",
   "border": "sha256:5e9f10a339bb4e63afbbd932f38d7a77",
-  "commit": "dfa3035fb07f66b89154fa41b8550ebaf873a02d",
-  "run": "https://github.com/domemp/sublime/actions/runs/33542807749",
-  "builtAt": "2026-09-01T18:19:28.237Z"
+  "commit": "96b677bf6ba586aff2035c87a23d7c930a17d957",
+  "run": "https://github.com/domemp/sublime/actions/runs/33548376140",
+  "builtAt": "2026-09-01T19:16:14.587Z"
 }

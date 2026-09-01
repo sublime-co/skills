@@ -1,10 +1,10 @@
 ---
 name: sublime
 description: Guide business needs to production-ready procedural agents on Sublime. Discover and validate the process, model it into knowledge, procedures, and decision tables, build through the MCP edge, measure against declared scenarios, calibrate until the quality gate approves, and deliver auditable evidence. Trigger it to create, automate, alter, test, measure, calibrate, evaluate, price, or publish agents, assistants, and conversational bots on Sublime — including "build an agent," "automate this process," "test my agent," and "publish my agent." Do not trigger it for application code, agents outside Sublime, or standalone prompt engineering. Requires the Sublime MCP server connected and accessible.
-license: LicenseRef-Sublime-Commercial
+license: MIT
 compatibility: Requires the Sublime MCP server connected to the user's organization, and Node.js 18+ for the checks that accompany the Skill.
 metadata:
-  version: 2.0.0
+  version: 2.0.1
   platform: '>=1.0 <2'
 ---
 

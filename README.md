@@ -1,5 +1,8 @@
 # Sublime Agent Development
 
+[![npm version](https://img.shields.io/npm/v/@sublime.am/skill.svg)](https://www.npmjs.com/package/@sublime.am/skill)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 **Descreva o processo do seu negócio. Receba um agente que o executa — medido, calibrado e com evidência auditável.**
 
 Uma Agent Skill para Claude Code, Cursor, Codex, Copilot, Gemini CLI, Windsurf, OpenCode e dezenas de outros agentes de código. Ela não escreve prompts avulsos: conduz um método para **descobrir, redesenhar, modelar, construir, calibrar e provar** um agente procedural — julgando o processo antes de automatizá-lo e definindo o que significa “correto” antes de medir seu comportamento.
@@ -25,7 +28,7 @@ O padrão instala **para o seu usuário**, valendo em todos os projetos:
 | --- | --- |
 | Claude Code | `~/.claude/skills/sublime` |
 | Cursor | `~/.cursor/skills/sublime` |
-| Codex | `~/.codex/skills/sublime` |
+| Codex | `~/.agents/skills/sublime` |
 | Copilot · Gemini CLI · Windsurf · Antigravity · OpenCode | o diretório de skills de cada um |
 
 ### No projeto, para o time inteiro
@@ -129,4 +132,4 @@ Issues incorporadas à Skill chegam às releases seguintes, com crédito ao auto
 
 ---
 
-`sublime` v2.0.0 · [Sublime](https://sublime.am) · [privacidade](PRIVACY.md) · licença LicenseRef-Sublime-Commercial
+`sublime` v2.0.1 · [Sublime](https://sublime.am) · [privacidade](PRIVACY.md) · licença [MIT](LICENSE)
