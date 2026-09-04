@@ -6,7 +6,7 @@
  * destroys the credibility of every number that does. Prose is left alone; the
  * sections that carry claims are held against the dossier.
  *
- *   node check-report.mjs <relatorio.md> <dossie.json>
+ *   node check-report.mjs <report.md> <dossier.json>
  */
 import {
   Findings,
@@ -16,8 +16,43 @@ import {
   readText,
 } from './report.mjs'
 
+/** The panel opens the report, and these are the measures it has to carry. Matched by the distinctive word of each row, so wording may breathe but a missing measure cannot hide. */
+export const PANEL = [
+  'Verificações aprovadas',
+  'Conversas concluídas',
+  'Respostas com desfecho',
+  'Repetições idênticas',
+  'cache',
+  'Custo total',
+  'Custo por conversa',
+  'Custo por resposta',
+  'Latência por conversa',
+  'Latência por resposta',
+  'Economia por conversa',
+  'Verificações por dólar',
+  'Volume',
+  'Desfechos',
+  'Tokens',
+]
+
+/** Rows of the panel that state a count, where a bare percentage hides the scale and a bare absolute hides the completeness. Both or neither. */
+const PAIRED = [
+  'Verificações aprovadas',
+  'Conversas concluídas',
+  'Respostas com desfecho',
+  'Repetições idênticas',
+  'cache',
+]
+
+/** The three outcomes a gate has. Approved, nothing to judge, refused — and none of them wears another's clothes. */
+const VERDICTS = ['PASS', 'SKIPPED', 'BLOCKED']
+
+/** A figure in a currency the platform never measured — it only exists once a rate is declared as a premise. */
+const LOCAL_CURRENCY = /R\$\s*[\d.,]+/
+
 /** The sections the model requires, matched by the distinctive word in each heading. */
 export const SECTIONS = [
+  'Painel',
   'Responsabilidade',
   'Processo',
   'Alocação',
@@ -83,6 +118,57 @@ function claimed(body) {
   )
 }
 
+/** The panel is what a client reads in thirty seconds, so it answers for its own completeness: every measure present, every count paired with its share, and any figure in local currency backed by the rate that produced it. */
+export function panel(found, findings) {
+  const block = found.find(({ title }) =>
+    title.toLowerCase().includes('painel'),
+  )
+  if (!block) return
+
+  for (const measure of PANEL) {
+    if (!block.body.toLowerCase().includes(measure.toLowerCase()))
+      findings.add('painel', `não traz "${measure}"`)
+  }
+
+  for (const measure of PAIRED) {
+    const line = block.body
+      .split('\n')
+      .find((text) => text.toLowerCase().includes(measure.toLowerCase()))
+    if (!line) continue
+
+    const ratio = /\d[\d\s.,]*\s*\/\s*\d/.test(line)
+    const share = /\d[\d.,]*\s*%/.test(line)
+
+    if (ratio && !share)
+      findings.add(`painel · ${measure}`, 'absoluto sem percentual ao lado')
+    if (share && !ratio)
+      findings.add(
+        `painel · ${measure}`,
+        'percentual sem o absoluto que o produz',
+      )
+  }
+
+  if (LOCAL_CURRENCY.test(block.body) && !/premissa/i.test(block.body))
+    findings.add(
+      'painel',
+      'converte para moeda local sem declarar a cotação como premissa',
+    )
+}
+
+/** A gate has three outcomes and none of them wears another's clothes: approved, nothing to judge, refused. A verdict written in any other word is a verdict dressed up. */
+export function verdict(found, findings) {
+  const block = found.find(({ title }) =>
+    title.toLowerCase().includes('veredito'),
+  )
+  if (!block) return
+
+  if (!VERDICTS.some((name) => block.body.includes(name)))
+    findings.add(
+      'seção "Veredito"',
+      `não nomeia ${VERDICTS.join(', ')} — um portão sem um destes três não foi reportado`,
+    )
+}
+
 export function check(markdown, dossier) {
   const findings = new Findings()
   const found = sections(markdown)
@@ -109,6 +195,9 @@ export function check(markdown, dossier) {
       )
     }
   }
+
+  panel(found, findings)
+  verdict(found, findings)
 
   const scenarios = dossier.scenarios ?? []
   const measured = found.find(({ title }) =>
@@ -138,7 +227,7 @@ export function check(markdown, dossier) {
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   const [reportPath, dossierPath] = argsOrUsage(
-    'check-report.mjs <relatorio.md> <dossie.json>',
+    'check-report.mjs <report.md> <dossier.json>',
     2,
   )
   const dossier = readJson(dossierPath)
@@ -146,7 +235,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   process.exit(
     findings.settle(
       'Relatório',
-      `${SECTIONS.length} seções presentes · todo número reconciliado com o dossiê`,
+      `${SECTIONS.length} seções presentes · painel completo · todo número reconciliado com o dossiê`,
     ),
   )
 }

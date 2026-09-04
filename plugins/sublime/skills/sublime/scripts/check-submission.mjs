@@ -6,7 +6,7 @@
  * suite is a true statement about a weak question, and the two verdicts must never
  * be confused: nothing here re-judges behaviour.
  *
- *   node check-submission.mjs <dossie.json>
+ *   node check-submission.mjs <dossier.json>
  */
 import { Findings, argsOrUsage, mentions, readJson } from './report.mjs'
 
@@ -157,7 +157,7 @@ export function check(dossier) {
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  const [path] = argsOrUsage('check-submission.mjs <dossie.json>', 1)
+  const [path] = argsOrUsage('check-submission.mjs <dossier.json>', 1)
   const dossier = readJson(path)
   const findings = check(dossier)
   const clauses = dossier.contract?.clauses?.length ?? 0

@@ -39,7 +39,7 @@ A forma da árvore é a principal alavanca de custo. Profundidade e descrição 
 Determinístico. Rode; não reproduza lendo.
 
 ```bash
-node scripts/check-rules.mjs <arquivo.md>
+node scripts/check-rules.mjs <file.md>
 ```
 
 Para cada tabela de decisão:

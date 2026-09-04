@@ -249,7 +249,7 @@ export function check(sources) {
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  const paths = argsOrUsage('check-rules.mjs <arquivo.md> [...]', 1)
+  const paths = argsOrUsage('check-rules.mjs <file.md> [...]', 1)
   const { findings, count } = check(
     paths.map((path) => ({ path, text: readText(path) })),
   )

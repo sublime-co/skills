@@ -132,4 +132,4 @@ Issues incorporadas à Skill chegam às releases seguintes, com crédito ao auto
 
 ---
 
-`sublime` v2.0.1 · [Sublime](https://sublime.am) · [privacidade](PRIVACY.md) · licença [MIT](LICENSE)
+`sublime` v2.0.2 · [Sublime](https://sublime.am) · [privacidade](PRIVACY.md) · licença [MIT](LICENSE)

@@ -15,14 +15,14 @@ Submissão   (esta Skill)   o que foi declarado cobre o que o negócio pediu?
 
 ## Montar o dossiê
 
-`dossie.json` não é um artefato da plataforma — você o monta a partir de `list-scenarios` (a declaração e a prova mais recente de cada cenário: repetições declaradas e medidas, expectativas não atendidas, trabalho e custo real de cada repetição, transcrição da reprovação, e se a prova ainda vale para o rascunho) e do resultado da tentativa de publicação. O campo `fresh` que a Conferência de Submissão exige é `freshness.status === 'fresh'` de `list-scenarios` — mapeie-o ao montar o dossiê.
+`dossier.json` não é um artefato da plataforma — você o monta a partir de `list-scenarios` (a declaração e a prova mais recente de cada cenário: repetições declaradas e medidas, expectativas não atendidas, trabalho e custo real de cada repetição, transcrição da reprovação, e se a prova ainda vale para o rascunho) e do resultado da tentativa de publicação. O campo `fresh` que a Conferência de Submissão exige é `freshness.status === 'fresh'` de `list-scenarios` — mapeie-o ao montar o dossiê.
 
 ## A Conferência de Submissão
 
 Determinística. Rode:
 
 ```bash
-node scripts/check-submission.mjs <dossie.json>
+node scripts/check-submission.mjs <dossier.json>
 ```
 
 As oito primeiras conferências; a nona roda no `check-report.mjs`:
@@ -55,7 +55,7 @@ Se o portão reprova, a plataforma recusa a publicação nomeando o critério e 
 Produza-o pelo modelo em [report.md](report.md), e valide:
 
 ```bash
-node scripts/check-report.mjs <relatorio.md> <dossie.json>
+node scripts/check-report.mjs <report.md> <dossier.json>
 ```
 
 Ele confere que as seções obrigatórias existem e que todo número declarado corresponde ao dossiê. Número divergente é reprovação: o relatório é o artefato que um terceiro vai inspecionar, e um número que não bate destrói a credibilidade dos que batem.

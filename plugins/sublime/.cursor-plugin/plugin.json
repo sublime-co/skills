@@ -1,6 +1,6 @@
 {
   "name": "sublime",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Guide business needs to production-ready procedural agents on Sublime. Discover and validate the process, model it into knowledge, procedures, and decision tables, build through the MCP edge, measure against declared scenarios, calibrate until the quality gate approves, and deliver auditable evidence. Trigger it to create, automate, alter, test, measure, calibrate, evaluate, price, or publish agents, assistants, and conversational bots on Sublime — including \"build an agent,\" \"automate this process,\" \"test my agent,\" and \"publish my agent.\" Do not trigger it for application code, agents outside Sublime, or standalone prompt engineering. Requires the Sublime MCP server connected and accessible.",
   "author": {
     "name": "Sublime",

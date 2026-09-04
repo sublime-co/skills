@@ -4,7 +4,7 @@ description: Guide business needs to production-ready procedural agents on Subli
 license: MIT
 compatibility: Requires the Sublime MCP server connected to the user's organization, and Node.js 18+ for the checks that accompany the Skill.
 metadata:
-  version: 2.0.1
+  version: 2.0.2
   platform: '>=1.0 <2'
 ---
 
@@ -355,9 +355,10 @@ As conferências da Skill são mecanismos de verificação, não fontes de julga
 **Execute-as. Não reproduza manualmente seu julgamento lendo os artefatos.**
 
 ```bash
-node scripts/check-rules.mjs <arquivo.md>
-node scripts/check-submission.mjs <dossie.json>
-node scripts/check-report.mjs <relatorio.md> <dossie.json>
+node scripts/check-rules.mjs <file.md>
+node scripts/check-submission.mjs <dossier.json>
+node scripts/check-report.mjs <report.md> <dossier.json>
+node scripts/build-panel.mjs  <report.md> > panel.html
 ```
 
 Responsabilidade de cada conferência:
@@ -371,6 +372,9 @@ check-submission
 
 check-report
 → verifica presença das seções e reconciliação dos números
+
+build-panel
+→ rende o relatório como painel; o artefato nunca se escreve à mão
 ```
 
 ### Falha
