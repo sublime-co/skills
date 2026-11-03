@@ -1,6 +1,6 @@
 # Operar a borda
 
-A borda MCP da Sublime é a única superfície de escrita. Ela tem cerca de 58 operações declaradas — você não enxerga todas ao mesmo tempo, então **procure pelo nome exato** em vez de navegar a lista.
+A borda MCP da Sublime é a única superfície de escrita. Você não enxerga todas as operações ao mesmo tempo, então **procure pelo nome exato** em vez de navegar a lista.
 
 **Esta referência nomeia a operação e a ordem. Ela nunca redocumenta parâmetro** — o schema da própria operação é a documentação, e mantê-lo em dois lugares garante que um dos dois apodreça.
 
@@ -11,12 +11,14 @@ A borda MCP da Sublime é a única superfície de escrita. Ela tem cerca de 58 o
 | Ativação | `list-doctrine` |
 | MODEL | `list-doctrine` → `read-doctrine` |
 | Inventário | `list-agents` · `list-knowledge-bases` · `list-procedures` · `list-scenarios` |
-| Conhecimento | `create-knowledge-base` → `create-knowledge-folder` → `create-knowledge-document` → `write-knowledge-document` → `publish-knowledge-document` → `publish-knowledge-version`; navegação por `navigate-knowledge-tree` e `read-knowledge-node` |
-| Procedimento | `create-procedure` → `update-procedure-version` → `create-procedure-step` → `create-procedure-transition`; leitura por `read-procedure` e `read-procedure-graph` |
-| Agente | `create-agent` → `update-agent-version` → `link-agent-knowledge` · `link-agent-procedure` → `read-agent` |
-| Versões | `list-*-versions` → `publish-*-version` → `revert-*-version` |
-| Medição | `create-scenario` → `measure-agent` → `read-round` → `compare-scenario`; leitura por `list-scenarios` |
-| Correção | `update-knowledge-node` · `update-knowledge-document` · `delete-knowledge-node` · `update-procedure-step` · `update-procedure-transition` · `delete-procedure-step` · `delete-procedure-transition` · `update-scenario` · `delete-scenario` · `unlink-agent-*` |
+| Conhecimento | `create-knowledge-base` → `create-knowledge-folder` → `create-document` → `write-document` → `publish-knowledge`; navegação por `navigate-knowledge` e `read-document` |
+| Procedimento | `create-procedure` → `create-procedure-step` → `update-procedure`; leitura por `read-procedure`; uma etapa isolada por `test-procedure-step` |
+| Agente | `create-agent` → `update-agent` → `link-agent-knowledge` · `link-agent-procedure` → `read-agent` |
+| Versões | `list-agent-versions` · `list-knowledge-versions` · `list-procedure-versions` → `publish-knowledge` · `publish-procedure` → `restore-*-version` · `rollback-*` |
+| Medição | `create-scenario` → `run-scenario` (um cenário, desfecho na hora) · `run-gate` (o portão inteiro) → `read-gate-round`; leitura por `list-scenarios` |
+| Conversa de teste | `chat-with-agent` → `read-conversation` → `list-turns` → `read-turn`; o que o agente pediu à equipe por `list-tasks` e `create-task-comment` |
+| Publicação | `publish-agent` → `list-agent-deployments`; `cancel-agent-deployment` para a tentativa em curso |
+| Correção | `update-document` · `update-knowledge-tree` · `update-knowledge-folder` · `delete-document` · `update-procedure-step` · `delete-procedure-step` · `update-scenario` · `delete-scenario` · `unlink-agent-*` |
 
 Descubra o schema de cada operação pela listagem de ferramentas do servidor; não presuma a assinatura.
 

@@ -64,7 +64,7 @@ Ele confere que as seções obrigatórias existem e que todo número declarado c
 
 **Só publicar a versão do agente é irreversível.** O vínculo pina a versão de cada base e de cada procedimento; publicar uma delas não move nenhum agente já no ar. Publique-as livremente antes de publicar o agente.
 
-Publicar o agente executa na chamada: a plataforma recebe o pedido, conduz o portão de qualidade por conta dela e publica se ele aprovar. A chamada não espera esse desfecho — `list-agent-publications` é onde você lê como foi.
+Publicar o agente executa na chamada: a plataforma recebe o pedido, conduz o portão de qualidade por conta dela e publica se ele aprovar. A chamada não espera esse desfecho — `list-agent-deployments` é onde você lê como foi.
 
 **Publique só depois que o portão aprovou na calibragem.** O ciclo termina na versão publicada; quem quiser conversar com ela entra na plataforma.
 

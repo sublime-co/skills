@@ -1,6 +1,6 @@
 # BUILD — os artefatos e a régua
 
-Objetivo: tudo existe em preview, e a régua está compilada. Nada foi medido ainda.
+Objetivo: tudo existe em preview, e as duas réguas estão compiladas: os cenários do portão e a bateria da conversa. Nada foi medido ainda.
 
 ## Ordem
 
@@ -20,7 +20,7 @@ Cenários por último, via `create-scenario`: a plataforma valida um cenário co
 6. **Chave de idempotência em toda escrita.**
 7. **Nenhum segredo pela conversa.** A borda devolve nome e identidade de um segredo, jamais o valor.
 
-## A régua compila de três geradores
+## A régua compila de quatro geradores
 
 Nenhum deles é invenção sua.
 
@@ -51,6 +51,12 @@ Contra as classes `when-not` · `not-when` · `out-of-order` · `duration`.
 
 Cada célula é **declarada** ou **dispensada com razão escrita**. A varredura completa é artefato conferível, e é o que substitui "toda cláusula positiva precisa de um gêmeo negativo" por enumeração.
 
+### 4 · Perfil e falhas contadas → a bateria da conversa
+
+O portão julga um turno e não lê a fala. A bateria cobre o resto: roteiros de conversa inteira, um por estrato do perfil de função, com o caminho de referência de cada um e `k = 3`, dimensionada pelo risco. Os estratos, o perfil, o tamanho e a regra de segurança estão em [quality.md](quality.md#7-a-bateria).
+
+A bateria é régua: escreva-a e congele-a **antes** da primeira medida, com os enums do agente como alvo declarado. Separe um conjunto retido, que nunca é usado para iterar.
+
 ## Repetições
 
 Leia os três eixos **em ordem**. Nunca os multiplique — multiplicar ordinais produz número sem significado.
@@ -72,8 +78,8 @@ A regra de aprovação é **pass^k**: toda repetição medida precisa satisfazer
 
 ## Termina quando
 
-Os artefatos existem em preview e releem como declarados, cada gerador produziu seus cenários, e a varredura está registrada.
+Os artefatos existem em preview e releem como declarados, cada gerador produziu seus cenários, a varredura está registrada, e a bateria cobre os estratos obrigatórios do perfil.
 
 ## Saída
 
-Artefatos da plataforma, cenários, a varredura registrada. `blueprint.md` reconciliado com o que a plataforma de fato aceitou.
+Artefatos da plataforma, cenários, a varredura registrada, `battery.md` com os roteiros e o caminho de referência. `blueprint.md` reconciliado com o que a plataforma de fato aceitou.
