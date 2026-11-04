@@ -1,4 +1,4 @@
-# Privacidade — Sublime Agent Development
+# Privacidade — Sublime
 
 ## O que esta Skill faz com dados
 

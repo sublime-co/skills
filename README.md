@@ -1,4 +1,4 @@
-# Sublime Agent Development
+# Sublime
 
 [![npm version](https://img.shields.io/npm/v/@sublime.am/skill.svg)](https://www.npmjs.com/package/@sublime.am/skill)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
@@ -132,4 +132,4 @@ Issues incorporadas à Skill chegam às releases seguintes, com crédito ao auto
 
 ---
 
-`sublime` v2.1.0 · [Sublime](https://sublime.am) · [privacidade](PRIVACY.md) · licença [MIT](LICENSE)
+`sublime` v2.1.1 · [Sublime](https://sublime.am) · [privacidade](PRIVACY.md) · [contact@sublime.am](mailto:contact@sublime.am) · licença [MIT](LICENSE)

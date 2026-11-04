@@ -4,7 +4,7 @@ description: Guide business needs to production-ready procedural agents on Subli
 license: MIT
 compatibility: Requires the Sublime MCP server connected to the user's organization, and Node.js 18+ for the checks that accompany the Skill.
 metadata:
-  version: 2.1.0
+  version: 2.1.1
   platform: '>=1.0 <2'
 ---
 

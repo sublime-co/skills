@@ -1,16 +1,16 @@
 {
   "skill": {
     "name": "sublime",
-    "version": "2.1.0",
+    "version": "2.1.1",
     "platform": ">=1.0 <2"
   },
   "mcp": {
     "name": "am.sublime/sublime",
     "version": "1.0.0"
   },
-  "tree": "sha256:9be073625d6c3fac79b4ba0fc06bb848",
+  "tree": "sha256:cf059c34a6cec3756832ec3519e5e5c5",
   "border": "sha256:09d2c3ba09987799159463dbcedf769d",
-  "commit": "6abe5dafccc4d409ca174d76c4f6b5d243ecc52e",
-  "run": "https://github.com/sublime-co/sublime/actions/runs/41875210483",
-  "builtAt": "2026-11-04T17:13:24.789Z"
+  "commit": "3435f86d5d2c99de02f47d327d8ac980c97aab91",
+  "run": "https://github.com/sublime-co/sublime/actions/runs/41876390073",
+  "builtAt": "2026-11-04T17:21:00.622Z"
 }
