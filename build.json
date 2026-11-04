@@ -10,7 +10,7 @@
   },
   "tree": "sha256:9be073625d6c3fac79b4ba0fc06bb848",
   "border": "sha256:09d2c3ba09987799159463dbcedf769d",
-  "commit": "553797282d98b04a522035814409da7b19ecaced",
-  "run": "https://github.com/sublime-co/sublime/actions/runs/41682007385",
-  "builtAt": "2026-11-03T17:14:05.866Z"
+  "commit": "6abe5dafccc4d409ca174d76c4f6b5d243ecc52e",
+  "run": "https://github.com/sublime-co/sublime/actions/runs/41875210483",
+  "builtAt": "2026-11-04T17:13:24.789Z"
 }
