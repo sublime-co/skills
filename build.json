@@ -9,8 +9,8 @@
     "version": "1.0.0"
   },
   "tree": "sha256:cf059c34a6cec3756832ec3519e5e5c5",
-  "border": "sha256:09d2c3ba09987799159463dbcedf769d",
-  "commit": "3435f86d5d2c99de02f47d327d8ac980c97aab91",
-  "run": "https://github.com/sublime-co/sublime/actions/runs/41876390073",
-  "builtAt": "2026-11-04T17:21:00.622Z"
+  "border": "sha256:12171b68d0a4b34e6da5d8d4ec03b088",
+  "commit": "b1f53565535f989f22eb9248aa65a99628e5cd0f",
+  "run": "https://github.com/sublime-co/sublime/actions/runs/42412804007",
+  "builtAt": "2026-11-07T20:49:22.821Z"
 }
